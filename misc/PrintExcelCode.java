@@ -12,7 +12,7 @@ package Code;
 
 public class PrintExcelCode {
 
-
+    // this is git demo
     public static void printExcelCode(int number){
 
         char [] code = new char[50];
