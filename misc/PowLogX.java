@@ -16,7 +16,7 @@ package Code;
 */
 
 
-public class Solution {
+public class PowLogX {
 
     public static int pow(int a, int x)
     {

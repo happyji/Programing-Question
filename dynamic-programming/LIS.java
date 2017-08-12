@@ -3,7 +3,7 @@ import java.util.*;
 
 
 
-public class Solution {
+public class LIS {
 
     public static int LIS(int arr[])
     {

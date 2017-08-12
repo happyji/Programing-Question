@@ -10,7 +10,7 @@ package Code;
     */
 
 
-public class Solution {
+public class MinCoinProblem {
 
     public static void printArray(int arr[]){
         System.out.println();

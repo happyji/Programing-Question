@@ -3,7 +3,7 @@ import java.util.*;
 
 
 
-public class Solution {
+public class MaxProfitBuySell {
 
     public static void maxProfitBuySell(int price[], int k)
     {

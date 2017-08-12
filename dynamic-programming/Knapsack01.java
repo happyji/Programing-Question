@@ -2,7 +2,7 @@ package Code;
 
 
 
-public class Solution {
+public class Knapsack01 {
 
 
     /*

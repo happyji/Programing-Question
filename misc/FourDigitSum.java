@@ -3,7 +3,7 @@ package Code;
 
 
 
-public class Solution {
+public class FourDigitSum {
 
 
     public static int fourDigitSum(String digit)

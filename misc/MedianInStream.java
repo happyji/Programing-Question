@@ -5,7 +5,7 @@ import java.util.LinkedList;
 import java.util.PriorityQueue;
 import java.util.Queue;
 
-public class Solution {
+public class MedianInStream {
 
     private static PriorityQueue<Integer> minHeap = new PriorityQueue<>();
     private static PriorityQueue<Integer> maxHeap = new PriorityQueue<>(Collections.reverseOrder());

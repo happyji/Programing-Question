@@ -16,7 +16,7 @@ package Code;
 
 import java.util.Arrays;
 
-public class Solution {
+public class NextGreaterNumberHavingSameDigit {
 
     public static void swap(char[] arr,int x,int y)
     {
