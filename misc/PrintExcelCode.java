@@ -10,7 +10,7 @@ package Code;
 
 
 
-public class Solution {
+public class PrintExcelCode {
 
 
     public static void printExcelCode(int number){
