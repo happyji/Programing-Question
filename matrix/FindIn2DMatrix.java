@@ -1,6 +1,6 @@
-package Code;
+package matrix;
 
-public class Solution {
+public class FindIn2DMatrix {
 
     public static boolean findIn2Dmatrix(int [][] mat,int m,int n,int key){
         int i=0;

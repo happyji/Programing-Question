@@ -1,20 +1,22 @@
-class Constant
+package trie;
+
+class TConstant
 {
     final static int ALPHABET_SIZE = 26;
     final static int NON_VALUE = -1;
 }
 
-class TrieNode
+class Node
 {
     boolean isLeafNode;
     int value;
-    TrieNode[] children;
+    Node[] children;
 
-    TrieNode(boolean isLeafNode, int value)
+    Node(boolean isLeafNode, int value)
     {
         this.value = value;
         this.isLeafNode = isLeafNode;
-        children = new TrieNode[Constant.ALPHABET_SIZE];
+        children = new Node[TConstant.ALPHABET_SIZE];
     }
 
     public void markAsLeaf(int value)
@@ -26,11 +28,11 @@ class TrieNode
 
 public class TrieDictionary {
 
-    TrieNode root;
+    Node root;
 
     TrieDictionary()
     {
-        this.root = new TrieNode(false, Constant.NON_VALUE);
+        this.root = new Node(false, TConstant.NON_VALUE);
     }
 
     private int getIndex(char ch)
@@ -42,10 +44,10 @@ public class TrieDictionary {
     {
         if (key == null)
         {
-            return Constant.NON_VALUE;
+            return TConstant.NON_VALUE;
         }
 
-        TrieNode currentNode = this.root;
+        Node currentNode = this.root;
         int charIndex = 0;
 
         while ((currentNode != null) && (charIndex < key.length()))
@@ -61,7 +63,7 @@ public class TrieDictionary {
             return currentNode.value;
         }
 
-        return  Constant.NON_VALUE;
+        return  TConstant.NON_VALUE;
     }
 
     public void insert(String key, int value)
@@ -71,7 +73,7 @@ public class TrieDictionary {
 
         key = key.toLowerCase();
 
-        TrieNode currentNode = this.root;
+        Node currentNode = this.root;
         int charIndex = 0;
 
         while (charIndex < key.length())
@@ -80,7 +82,7 @@ public class TrieDictionary {
 
             if (currentNode.children[childIndex] == null)
             {
-                currentNode.children[childIndex] = new TrieNode(false, Constant.NON_VALUE);
+                currentNode.children[childIndex] = new Node(false, TConstant.NON_VALUE);
             }
 
             currentNode = currentNode.children[childIndex];

@@ -1,23 +1,8 @@
-class Constant
-{
-    final static int ALPHABET_SIZE = 26;
-    final static int NON_VALUE = -1;
-}
+package trie;
 
-class TrieNode
-{
-     char character;
-     boolean isLeaf;
-     TrieNode left,middle,right;
+import trie.common.TrieNode;
 
-    TrieNode(char c,boolean isleaf)
-    {
-        character = c;
-        isLeaf = isleaf;
-    }
-}
-
-public class TriesTernarySearch {
+public class AutoSearch {
 
     TrieNode root;
 
@@ -80,7 +65,7 @@ public class TriesTernarySearch {
 
     public static void main(String[] args)
     {
-        TriesTernarySearch ts = new TriesTernarySearch();
+        AutoSearch ts = new AutoSearch();
         ts.put("prashant");
         ts.put("praveen");
         ts.put("pradeep");

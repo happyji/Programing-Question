@@ -1,4 +1,4 @@
-package Code;
+package matrix;
 import java.util.*;
 import java.lang.*;
 
@@ -27,7 +27,7 @@ class NodeComparator implements Comparator<Node>
 }
 
 
-public class TestClass
+public class FindKSmallestElementInSortedMatrix
 {
 
     static void findKSmallestElement(int [][]mat,int k)

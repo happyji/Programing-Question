@@ -1,7 +1,7 @@
-package Code;
+package matrix;
 
 
-public class Solution {
+public class CountIsland {
 
 
     public static boolean isNonVisited(int x,int y,boolean  [][]visited)

@@ -1,10 +1,10 @@
-package Code;
+package matrix;
 
 
 
 
 
-public class Solution {
+public class SpiralPrint {
 
 
 

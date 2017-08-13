@@ -1,6 +1,6 @@
-package Code;
+package matrix;
 
-public class Solution {
+public class GetRowWithMaxOnes {
 
     public static int getRowWithMaxOnes(int arr[][],int m,int n){
             int i = 0;

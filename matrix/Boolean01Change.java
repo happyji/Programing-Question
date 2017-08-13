@@ -1,10 +1,10 @@
-package Code;
+package matrix;
 
 //A Boolean Matrix Question
 
 
 
-public class Solution {
+public class Boolean01Change {
 
     public static void Boolean01Change(boolean [][] mat)
     {

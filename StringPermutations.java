@@ -1,7 +1,4 @@
-package Code;
-
-
-public class Solution {
+public class StringPermutations {
 
     public static void permutate(String prefix,String str)
     {

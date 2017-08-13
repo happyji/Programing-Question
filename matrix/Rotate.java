@@ -1,10 +1,10 @@
-package Code;
+package matrix;
 
 
 
 
 
-public class Solution {
+public class Rotate {
 
     public static void rotate90(int mat[][]){
          int n = mat.length;
