@@ -1,4 +1,4 @@
-package Code;
+package heap;
 
 
 import java.util.Arrays;
@@ -7,7 +7,7 @@ import java.util.List;
 
 
 
-public class Solution {
+public class MaxHeapify {
 
     public static void maxHeapify(List<Integer> items,int k)
     {

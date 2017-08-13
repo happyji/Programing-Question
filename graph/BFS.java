@@ -1,3 +1,5 @@
+package graph;
+
 import java.io.File;
 import java.io.IOException;
 import java.util.*;
@@ -134,7 +136,7 @@ class Graph
 
 
 
-class Solution
+public class BFS
 {
 
     public static void main(String args[]) throws IOException

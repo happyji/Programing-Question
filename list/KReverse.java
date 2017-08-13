@@ -1,18 +1,9 @@
-package Code;
+package list;
 
 
 
-class Node{
-    int data;
-    Node next;
 
-    Node(int d){
-        data = d;
-        next = null;
-    }
-}
-
-public class Solution {
+public class KReverse {
 
     public static Node head;
 

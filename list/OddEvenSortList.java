@@ -1,4 +1,4 @@
-package Code;
+package list;
 
 /*
    Given a singly linked list,
@@ -6,20 +6,10 @@ package Code;
    In place solution was expected.
  */
 
-class Node{
-    int data;
-    Node next;
 
-    Node(int d){
-        this.data = d;
-        next = null;
-    }
-}
+import list.Node;
 
-
-
-
-public class Solution {
+public class OddEvenSortList {
 
     public static Node head;
 

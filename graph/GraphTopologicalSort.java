@@ -1,8 +1,10 @@
+package graph;
+
 import java.io.File;
 import java.io.IOException;
 import java.util.*;
 
-class AdjNode
+class class AdjNode
 {
     int vertexNumber;
     AdjNode next;
@@ -135,7 +137,7 @@ class Graph
 
 
 
-class Solution
+class GraphTopologicalSort
 {
 
     public static void main(String args[]) throws IOException

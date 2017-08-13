@@ -1,4 +1,4 @@
-package Code;
+package heap;
 
 
 
@@ -105,7 +105,7 @@ class Heap<T extends Comparable<T>>
 
 
 
-public class Solution {
+public class HeapDemo {
 
     public static void maxHeapify(List<Integer> items,int k)
     {

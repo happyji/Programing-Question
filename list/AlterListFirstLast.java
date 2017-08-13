@@ -1,19 +1,9 @@
-package Code;
+package list;
 
 import java.util.Stack;
 
-class Node{
-    int data;
-   Node next;
 
-    Node(int d)
-    {
-         this.data= d;
-        this.next = null;
-    }
-}
-
-public class Solution {
+public class AlterListFirstLast {
 
 
 

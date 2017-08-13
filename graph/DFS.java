@@ -1,3 +1,4 @@
+package graph;
 import java.io.File;
 import java.io.IOException;
 import java.util.*;
@@ -144,7 +145,7 @@ PageD PageC 30
 */
 
 
-class Solution
+public class DFS
 {
 
     public static void main(String args[]) throws IOException
