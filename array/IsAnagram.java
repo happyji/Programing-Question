@@ -1,14 +1,15 @@
-package Code;
+package array;
 
 
 
-public class Solution {
+public class IsAnagram {
 
     public static boolean isAnagram(String str1,String str2){
         int [] lookup = new int[256];
 
          //step 1 : non- equal string will never make a anagrams
         if(str1.length() != str2.length()) return false; 
+
 
         /*  step 2
             parse one array 

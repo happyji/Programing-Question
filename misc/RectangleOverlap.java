@@ -1,4 +1,4 @@
-package Code;
+package misc;
 
 class Point
 {
@@ -13,7 +13,7 @@ class Point
 
 
 
-public class Solution {
+public class RectangleOverlap {
 
 
     public static boolean isOverlap(Point l1,Point r1,Point l2,Point r2)

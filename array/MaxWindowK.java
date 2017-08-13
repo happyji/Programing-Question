@@ -1,4 +1,4 @@
-package Code;
+package array;
 
 
 /*
@@ -31,7 +31,7 @@ import java.util.PriorityQueue;
 
 
 
-public class Solution {
+public class MaxWindowK {
 
     public static void printMinWindow(int[] arr,int k){
         PriorityQueue<Integer> heap = new PriorityQueue<>(Collections.reverseOrder());

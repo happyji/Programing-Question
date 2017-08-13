@@ -1,4 +1,4 @@
-package Code;
+package array;
 
 /*
 
@@ -24,7 +24,7 @@ class HeapNode
     }
 }
 
-public class Solution {
+public class MergeSortedArray {
 
     public static PriorityQueue<HeapNode> heap;
 

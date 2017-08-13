@@ -1,4 +1,4 @@
-package Code;
+package misc;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.*;
@@ -38,7 +38,7 @@ import java.lang.*;
 
 
 
-public class TestClass
+public class PrintUniquePatternOfNumber
 {
     static void printPattern(int m,String str)
     {

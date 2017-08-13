@@ -9,7 +9,7 @@ Given a string, find the first non-repeating character in it.
 
 
 
-public class Solution {
+public class FirstDuplicateIndex {
 
     public static int getFirstDuplicateIndex(char [] str)
     {

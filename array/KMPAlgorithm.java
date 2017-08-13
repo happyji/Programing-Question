@@ -1,8 +1,8 @@
-package Code;
+package array;
 
 
 
-public class Solution {
+public class KMPAlgorithm {
 
 
 

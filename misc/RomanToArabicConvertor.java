@@ -1,10 +1,10 @@
-package Code;
+package misc;
 
 import java.lang.*;
 import java.util.HashMap;
 
 
-public class TestClass
+public class RomanToArabicConvertor
 {
 
     static HashMap<String,Integer> map;

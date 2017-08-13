@@ -1,8 +1,8 @@
-package Code;
+package array;
 
 import java.util.Stack;
 
-public class Solution {
+public class NumberToAlpha {
 
     
     public static Character [] hmap = {'a','a','b','c','d','e','f',

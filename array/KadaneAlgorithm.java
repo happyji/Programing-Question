@@ -1,7 +1,7 @@
-package Code;
+package array;
 
 //kadane algorithm
-public class Solution {
+public class KadaneAlgorithm {
 
     public static int maxSum(int[] arr) {
         if(arr.length == 1)

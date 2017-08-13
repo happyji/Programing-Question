@@ -7,7 +7,7 @@ package Code;
 
 
 
-public class Solution {
+public class BuildingWaterTrap {
 
 
     public static void buildingWaterTrap(int arr[])

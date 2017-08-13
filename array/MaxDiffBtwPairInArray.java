@@ -1,9 +1,10 @@
+package array;
 import java.util.*;
 
 
 //Given an array find the max difference between any pair. with minimum comparision
 
-public class Solution {
+public class MaxDiffBtwPairInArray {
 
     public static void printMaximumDiferencePair(List<Integer> arr)
     {

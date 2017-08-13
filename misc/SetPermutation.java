@@ -1,10 +1,10 @@
-package Code;
+package misc;
 
 
 import java.util.Arrays;
 import java.util.HashSet;
 
-public class Solution {
+public class SetPermutation {
 
     public  static HashSet<String> hashSet  = new HashSet<>();
     public static int count = 0;

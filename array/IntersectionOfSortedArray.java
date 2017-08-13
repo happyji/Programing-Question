@@ -1,4 +1,4 @@
-package Code;
+package array;
 
 
 /*
@@ -19,7 +19,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class Solution {
+public class IntersectionOfSortedArray {
 
     public static List<Integer> intersection(List<Integer> a1,List<Integer> a2)
     {

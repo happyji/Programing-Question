@@ -1,10 +1,12 @@
+package array;
+
 import java.util.*;
 import java.lang.*;
 import java.io.*;
 
 
 
-class Solution
+public class MaxNonRepetitiveSubString
 {
 
 

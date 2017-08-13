@@ -1,8 +1,8 @@
-package Code;
+package array;
 
 import java.util.Stack;
 
-public class Solution {
+public class NextBigNumber {
 
     /*
         test case :

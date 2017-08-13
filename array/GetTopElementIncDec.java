@@ -1,4 +1,4 @@
-package Code;
+package array;
 
 /*
         {1,2,3,4,3,2}
@@ -7,7 +7,7 @@ package Code;
  */
 
 
-public class Solution {
+public class GetTopElementIncDec {
 
     public static int getTopElementIncDec(int arr[])
     {

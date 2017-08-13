@@ -1,7 +1,7 @@
-package Code;
+package arithmeticwithconstraints;
 import java.util.*;
 
-public class Solution {
+public class DivideWithoutItsOperator {
 
     public static int divide(int divident,int divisor){
 

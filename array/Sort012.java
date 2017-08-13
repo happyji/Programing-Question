@@ -2,7 +2,7 @@ package Code;
 
 
 
-public class Solution {
+public class Sort012 {
 
     public static void swap(int arr[],int x,int y){
         int temp = arr[x];

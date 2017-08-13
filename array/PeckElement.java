@@ -7,7 +7,7 @@ package Code;
  */
 
 
-public class Solution {
+public class PeckElement {
 
     public static int findPeakElement(int arr[])
     {

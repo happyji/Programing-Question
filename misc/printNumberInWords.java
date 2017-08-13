@@ -1,6 +1,6 @@
-package Code;
+package misc;
 
-public class Solution {
+public class printNumberInWords {
 
     public  static String[] onesName = {"","one","two","three","four","five","six","seven","eight","nine"};
     public static  String[] teensName = {"ten","eleven","twelve","thirteen","fourteen","fifteen","sixteen","seventeen","eighteen","nineteen"};

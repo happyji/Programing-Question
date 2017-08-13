@@ -1,4 +1,4 @@
-package Code;
+package misc;
    //Given a no, find next no greater than n and having same digits.I was supposed to write a working code for this on paper.
 
 /*

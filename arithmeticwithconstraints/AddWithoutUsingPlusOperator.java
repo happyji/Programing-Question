@@ -1,7 +1,7 @@
-package Code;
+package arithmeticwithconstraints;
 import java.util.*;
 
-public class Solution {
+public class AddWithoutUsingPlusOperator {
 
     public  static  int add(int x, int y)
     {

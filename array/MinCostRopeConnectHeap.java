@@ -1,11 +1,11 @@
-package Code;
+package array;
 
 
 import java.util.Arrays;
 import java.util.List;
 import java.util.PriorityQueue;
 
-public class Solution {
+public class MinCostRopeConnectHeap {
 
    public static Integer getMinCostRopeConnect(List arr)
    {

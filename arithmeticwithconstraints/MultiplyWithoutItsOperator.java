@@ -1,7 +1,7 @@
-package Code;
+package arithmeticwithconstraints;
 import java.util.*;
 
-public class Solution {
+public class MultiplyWithoutItsOperator {
 
     public static int multiply(int a,int b){
         int ans = 0;

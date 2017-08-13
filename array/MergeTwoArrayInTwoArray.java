@@ -1,6 +1,7 @@
+package array;
 import java.util.*;
 
-public class Solution {
+public class MergeTwoArrayInTwoArray {
 
     public static int getMinForSecond(int arr1[],int arr2[])
     {

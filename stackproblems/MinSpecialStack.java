@@ -1,4 +1,5 @@
-package Code;
+package stackproblems;
+
 import java.util.*;
 
 class SpecialStack<E extends Comparable<E>>
@@ -49,7 +50,7 @@ class SpecialStack<E extends Comparable<E>>
 
 
 
-public class Solution {
+public class MinSpecialStack {
 
 
 
