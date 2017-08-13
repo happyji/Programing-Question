@@ -3,47 +3,15 @@ import java.io.File;
 import java.io.IOException;
 import java.util.*;
 
-class AdjNode
-{
-    int vertexNumber;
-    AdjNode next;
 
-    AdjNode(int number,AdjNode n)
-    {
-        vertexNumber = number;
-        next =n;
-    }
-}
-class Vertex
-{
-    String name;
 
-    Vertex(String n)
-    {
-        name = n;
-    }
-}
-
-class Edge
-{
-    int src;
-    int dest;
-    Integer weight;
-    Edge(int s,int d,Integer w)
-    {
-        src = s;
-        dest =d;
-        weight =w;
-    }
-}
-
-class Graph
+class DGraph
 {
     Vertex[]  vertices;
     Edge[] edges;
     AdjNode[] adjLists;
 
-    Graph(Scanner sc)
+    DGraph(Scanner sc)
     {
         vertices = new  Vertex[sc.nextInt()];
         adjLists = new AdjNode[vertices.length];
@@ -151,7 +119,7 @@ public class DFS
     public static void main(String args[]) throws IOException
     {
         Scanner sc = new Scanner(new File(System.getProperty("user.dir")+"/src/input.txt"));
-        Graph graph = new Graph(sc);
+        DGraph graph = new DGraph(sc);
         graph.DFS();
     }
 

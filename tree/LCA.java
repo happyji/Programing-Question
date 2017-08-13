@@ -1,30 +1,19 @@
-package Code;
-import java.util.*;
-
-class Node{
-    int data;
-    Node left;
-    Node right;
-
-    Node(int data){
-        this.data = data;
-        this.left = null;
-        this.right = null;
-    }
-}
+package tree;
 
 
-public class Solution {
-    public static Node root;
 
-    public static Node LCA(Node p,int n1,int n2)
+
+public class LCA {
+    public static tree.common.Node root;
+
+    public static tree.common.Node LCA(tree.common.Node p, int n1, int n2)
     {
         if(p== null) return null;
 
         if(p.data == n1 || p.data == n2) return p;
 
-        Node lcaLeft =LCA(p.left,n1,n2);
-        Node lcaRight =LCA(p.right,n1,n2);
+        tree.common.Node lcaLeft =LCA(p.left,n1,n2);
+        tree.common.Node lcaRight =LCA(p.right,n1,n2);
 
         if(lcaLeft!= null && lcaRight!= null) return p;
 
@@ -33,19 +22,19 @@ public class Solution {
 
 
     public static void main(String args[]){
-        root = new Node(50);
+        root = new tree.common.Node(50);
 
-        root.left = new Node(25);
-        root.left.left = new Node(12);
-        root.left.right = new Node(30);
-        root.left.left.left = new Node(7);
-        root.left.left.right = new Node(20);
+        root.left = new tree.common.Node(25);
+        root.left.left = new tree.common.Node(12);
+        root.left.right = new tree.common.Node(30);
+        root.left.left.left = new tree.common.Node(7);
+        root.left.left.right = new tree.common.Node(20);
 
-        root.right = new Node(70);
-        root.right.left = new Node(60);
-        root.right.right = new Node(80);
-        root.right.left.left = new Node(55);
-        root.right.left.right = new Node(65);
+        root.right = new tree.common.Node(70);
+        root.right.left = new tree.common.Node(60);
+        root.right.right = new tree.common.Node(80);
+        root.right.left.left = new tree.common.Node(55);
+        root.right.left.right = new tree.common.Node(65);
 
 
         System.out.println(LCA(root, 65, 80).data);

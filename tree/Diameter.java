@@ -1,5 +1,4 @@
-package Code;
-import java.util.*;
+package tree;
 import java.lang.*;
 
 
@@ -9,26 +8,9 @@ import java.lang.*;
 
  */
 
-
-class Node
+public class Diameter
 {
-    int data;
-    Node left;
-    Node right;
-
-    public Node(int data)
-    {
-        this.data = data;
-        this.left = null;
-        this.right = null;
-    }
-}
-
-
-
-public class Solution
-{
-    static int getDiameterUtil(Node node,int[] height,int index)
+    static int getDiameterUtil(tree.common.Node node, int[] height, int index)
     {
         if(node == null)
         {
@@ -50,7 +32,7 @@ public class Solution
 
     }
 
-    static int getDiameter(Node root)
+    static int getDiameter(tree.common.Node root)
     {
         return getDiameterUtil(root,new int[2],0);
     }
@@ -58,20 +40,20 @@ public class Solution
 
     public static void main(String args[])
     {
-        Node root;
-        root = new Node(50);
+        tree.common.Node root;
+        root = new tree.common.Node(50);
 
-        root.left = new Node(25);
-        root.left.left = new Node(12);
-        root.left.right = new Node(30);
-        root.left.left.left = new Node(7);
-        root.left.left.right = new Node(20);
+        root.left = new tree.common.Node(25);
+        root.left.left = new tree.common.Node(12);
+        root.left.right = new tree.common.Node(30);
+        root.left.left.left = new tree.common.Node(7);
+        root.left.left.right = new tree.common.Node(20);
 
-        root.right = new Node(70);
-        root.right.left = new Node(60);
-        root.right.right = new Node(80);
-        root.right.left.left = new Node(55);
-        root.right.left.right = new Node(65);
+        root.right = new tree.common.Node(70);
+        root.right.left = new tree.common.Node(60);
+        root.right.right = new tree.common.Node(80);
+        root.right.left.left = new tree.common.Node(55);
+        root.right.left.right = new tree.common.Node(65);
 
 
         System.out.println(getDiameter(root));

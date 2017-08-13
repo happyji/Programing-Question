@@ -1,4 +1,4 @@
-package Code;
+package tree;
 
 /*
     - vertical traversal
@@ -6,23 +6,13 @@ package Code;
  */
 
 
+import tree.common.Node;
+
 import java.util.*;
 
 
-class Node{
-    int data;
-    Node left;
-    Node right;
 
-    Node(int data){
-        this.data = data;
-        this.left = null;
-        this.right = null;
-    }
-}
-
-
-public class Solution {
+public class VerticalandDiagonalTraversal {
 
     public static Node root;
     public  static TreeMap<Integer,ArrayList<Node>> map = new TreeMap<>();

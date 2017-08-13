@@ -127,7 +127,7 @@ class LRULinkedHashMap  extends LinkedHashMap
     }
 }
 
-class Solution
+class LRUCustomLRU
 {
     public static void main(String args[])
     {

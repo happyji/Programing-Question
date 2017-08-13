@@ -1,28 +1,11 @@
+package tree;
 
-class Node
-{
-    int data;
-    Node left;
-    Node right;
+import tree.common.Node;
 
-    Node(int data)
-    {
-        this.data= data;
-        this.left = null;
-        this.right = null;
-    }
-
-    boolean isRightChildPresent()
-    {
-        return this.right!= null;
-    }
-
-}
-
-class Solution
+class InorderSuccessorInBST
 {
 
-    public static Node search(Node p,int key)
+    public static Node search(Node p, int key)
     {
         Node current = p;
 
@@ -95,7 +78,7 @@ class Solution
 
         */
 
-        if(current.isRightChildPresent())
+        if(true)//current.isRightChildPresent())
         {
             return getSmallest(current.right);
         }

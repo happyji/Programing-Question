@@ -1,50 +1,20 @@
 package graph;
 
+import graph.common.AdjNode;
+import graph.common.Edge;
+import graph.common.Vertex;
+
 import java.io.File;
 import java.io.IOException;
 import java.util.*;
 
-class class AdjNode
-{
-    int vertexNumber;
-    AdjNode next;
-
-    AdjNode(int number,AdjNode n)
-    {
-        vertexNumber = number;
-        next =n;
-    }
-}
-class Vertex
-{
-    String name;
-
-    Vertex(String n)
-    {
-        name = n;
-    }
-}
-
-class Edge
-{
-    int src;
-    int dest;
-    Integer weight;
-    Edge(int s,int d,Integer w)
-    {
-        src = s;
-        dest =d;
-        weight =w;
-    }
-}
-
-class Graph
+class TGraph
 {
     Vertex[]  vertices;
     Edge[] edges;
     AdjNode[] adjLists;
 
-    Graph(Scanner sc)
+    TGraph(Scanner sc)
     {
         vertices = new  Vertex[sc.nextInt()];
         adjLists = new AdjNode[vertices.length];
@@ -143,12 +113,12 @@ class GraphTopologicalSort
     public static void main(String args[]) throws IOException
     {
         Scanner sc = new Scanner(new File(System.getProperty("user.dir")+"/src/input.txt"));
-        Graph graph = new Graph(sc);
-        Stack<Integer> stack = graph.topologicalSort();
+        TGraph tGraph = new TGraph(sc);
+        Stack<Integer> stack = tGraph.topologicalSort();
 
         while (!stack.isEmpty())
         {
-            System.out.print(graph.vertices[stack.pop()].name+" ");
+            System.out.print(tGraph.vertices[stack.pop()].name+" ");
         }
 
     }

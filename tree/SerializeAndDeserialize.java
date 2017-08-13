@@ -1,27 +1,14 @@
-package Code;
+package tree;
 
 import java.util.*;
 
 
-class Node{
-    int data;
-    Node left;
-    Node right;
+public class SerializeAndDeserialize {
 
-    Node(int data){
-        this.data = data;
-        this.left = null;
-        this.right = null;
-    }
-}
+    public static tree.common.Node root;
 
 
-public class Solution {
-
-    public static Node root;
-
-
-    public static void serialize(Node p,StringBuilder sb)
+    public static void serialize(tree.common.Node p, StringBuilder sb)
     {
         if(p== null)
         {
@@ -43,7 +30,7 @@ public class Solution {
     }
 
 
-    public static Node deSerialize(StringTokenizer tokenizer)
+    public static tree.common.Node deSerialize(StringTokenizer tokenizer)
     {
        if(!tokenizer.hasMoreElements())
            return null;
@@ -52,14 +39,14 @@ public class Solution {
        if(nodeVal.equals("#"))
            return null;
 
-       Node newNode = new Node(Integer.parseInt(nodeVal));
+       tree.common.Node newNode = new tree.common.Node(Integer.parseInt(nodeVal));
        newNode.left = deSerialize(tokenizer);
        newNode.right = deSerialize(tokenizer);
        return newNode;
     }
 
 
-    public static Node deSerialize(String strTree)
+    public static tree.common.Node deSerialize(String strTree)
     {
         if(strTree== null || strTree.length()== 0) return null;
         StringTokenizer tokenizer = new StringTokenizer(strTree," ");
@@ -67,7 +54,7 @@ public class Solution {
     }
 
 
-    public static void inOrder(Node p)
+    public static void inOrder(tree.common.Node p)
     {
         if(p== null)
             return;
@@ -78,19 +65,19 @@ public class Solution {
     }
 
     public static void main(String args[]){
-        root = new Node(50);
+        root = new tree.common.Node(50);
 
-        root.left = new Node(25);
-        root.left.left = new Node(12);
-        root.left.right = new Node(30);
-        root.left.left.left = new Node(7);
-        root.left.left.right = new Node(20);
+        root.left = new tree.common.Node(25);
+        root.left.left = new tree.common.Node(12);
+        root.left.right = new tree.common.Node(30);
+        root.left.left.left = new tree.common.Node(7);
+        root.left.left.right = new tree.common.Node(20);
 
-        root.right = new Node(70);
-        root.right.left = new Node(60);
-        root.right.right = new Node(80);
-        root.right.left.left = new Node(55);
-        root.right.left.right = new Node(65);
+        root.right = new tree.common.Node(70);
+        root.right.left = new tree.common.Node(60);
+        root.right.right = new tree.common.Node(80);
+        root.right.left.left = new tree.common.Node(55);
+        root.right.left.right = new tree.common.Node(65);
 
         String strTree = serialize();
         System.out.println(strTree);

@@ -1,29 +1,18 @@
-package Code;
+package tree;
 
-class Node{
-    int data;
-    Node left;
-    Node right;
 
-    Node(int x){
-        data = x;
-        left = null;
-        right = null;
-    }
-}
+public class convertSortedArrayIntoBST {
 
-public class Solution {
+    public static tree.common.Node root;
 
-    public static Node root;
-
-    public static Node convertSortedArrayIntoBST(int arr[],int low,int high)
+    public static tree.common.Node convertSortedArrayIntoBST(int arr[], int low, int high)
     {
-        Node p = null;
+        tree.common.Node p = null;
 
         if (low<= high)
         {
             int m= (low+high)/2;
-            p = new Node(arr[m]);
+            p = new tree.common.Node(arr[m]);
             p.left  = convertSortedArrayIntoBST(arr, low, m-1);
             p.right = convertSortedArrayIntoBST(arr, m+1, high);
         }
@@ -32,7 +21,7 @@ public class Solution {
 
     }
 
-    public static void InOrder(Node p)
+    public static void InOrder(tree.common.Node p)
     {
         if(p== null) return;
 

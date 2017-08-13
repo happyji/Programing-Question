@@ -4,47 +4,15 @@ import java.io.File;
 import java.io.IOException;
 import java.util.*;
 
-class AdjNode
-{
-    int vertexNumber;
-    AdjNode next;
 
-    AdjNode(int number,AdjNode n)
-    {
-        vertexNumber = number;
-        next =n;
-    }
-}
-class Vertex
-{
-    String name;
 
-    Vertex(String n)
-    {
-        name = n;
-    }
-}
-
-class Edge
-{
-    int src;
-    int dest;
-    Integer weight;
-    Edge(int s,int d,Integer w)
-    {
-        src = s;
-        dest =d;
-        weight =w;
-    }
-}
-
-class Graph
+class BGraph
 {
     Vertex[]  vertices;
     Edge[] edges;
     AdjNode[] adjLists;
 
-    Graph(Scanner sc)
+    BGraph(Scanner sc)
     {
         vertices = new  Vertex[sc.nextInt()];
         adjLists = new AdjNode[vertices.length];
@@ -142,8 +110,8 @@ public class BFS
     public static void main(String args[]) throws IOException
     {
         Scanner sc = new Scanner(new File(System.getProperty("user.dir")+"/src/input.txt"));
-        Graph graph = new Graph(sc);
-        graph.BFS();
+        BGraph BGraph = new BGraph(sc);
+        BGraph.BFS();
     }
 
 

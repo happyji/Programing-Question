@@ -1,23 +1,6 @@
-package Code;
+package tree;
 import java.util.*;
 import java.lang.*;
-
-
-
-
-class Node
-{
-    int data;
-    Node left;
-    Node right;
-
-    public Node(int data)
-    {
-        this.data = data;
-        this.left = null;
-        this.right = null;
-    }
-}
 
 /*
                       50
@@ -28,22 +11,22 @@ class Node
  */
 
 
-public class Solution
+public class PrintCousin
 {
 
 
-    static void printCousin(Node root,Node target)
+    static void printCousin(tree.common.Node root, tree.common.Node target)
     {
-        Queue<Node> queue = new LinkedList<>();
+        Queue<tree.common.Node> queue = new LinkedList<>();
         Queue<Integer> lqueue = new LinkedList<>();
         queue.add(root);
         lqueue.add(0);
         int defaultLevel=-1;
-        Node sibling = null;
+        tree.common.Node sibling = null;
 
         while (!queue.isEmpty())
         {
-            Node node = queue.poll();
+            tree.common.Node node = queue.poll();
             int level = lqueue.poll();
 
             if(defaultLevel != -1)
@@ -88,26 +71,26 @@ public class Solution
 
     public static void main(String args[])
     {
-        Node root;
-        root = new Node(50);
+        tree.common.Node root;
+        root = new tree.common.Node(50);
 
-        root.left = new Node(25);
-        root.left.left = new Node(12);
+        root.left = new tree.common.Node(25);
+        root.left.left = new tree.common.Node(12);
 
 
 
-        root.left.right = new Node(30);
-        root.left.left.left = new Node(7);
-        root.left.left.right = new Node(20);
+        root.left.right = new tree.common.Node(30);
+        root.left.left.left = new tree.common.Node(7);
+        root.left.left.right = new tree.common.Node(20);
 
-        root.right = new Node(70);
-        root.right.left = new Node(60);
+        root.right = new tree.common.Node(70);
+        root.right.left = new tree.common.Node(60);
 
-        Node p = root.right.left;//this node
+        tree.common.Node p = root.right.left;//this node
 
-        root.right.right = new Node(80);
-        root.right.left.left = new Node(55);
-        root.right.left.right = new Node(65);
+        root.right.right = new tree.common.Node(80);
+        root.right.left.left = new tree.common.Node(55);
+        root.right.left.right = new tree.common.Node(65);
 
         printCousin(root,p);
 

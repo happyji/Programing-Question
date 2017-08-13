@@ -1,36 +1,21 @@
-package Code;
+package tree;
 import java.util.*;
 import java.lang.*;
 
-class Node
-{
-    int data;
-    Node left;
-    Node right;
-
-
-    Node(int data)
-    {
-        this.data = data;
-        this.left = null;
-        this.right = null;
-    }
-}
-
-class Solution
+class PrintNodeMoreThanGivenNodeHD
 {
 
-    public static Node root;
+    public static tree.common.Node root;
 
-    public static void printNodes(Node key)
+    public static void printNodes(tree.common.Node key)
     {
-        Queue<Node> queue = new LinkedList<Node>();
+        Queue<tree.common.Node> queue = new LinkedList<tree.common.Node>();
         queue.offer(root);
 
         Queue<Integer> hdQueue = new LinkedList<Integer>();
         hdQueue.offer(0);
 
-        Node p = null;
+        tree.common.Node p = null;
         int hd = 0;
 
         boolean isKeyNodeFound = false;
@@ -72,18 +57,18 @@ class Solution
 
     public static void main(String args[])
     {
-        root = new Node(1);
-        root.left = new Node(2);
-        root.right = new Node(3);
+        root = new tree.common.Node(1);
+        root.left = new tree.common.Node(2);
+        root.right = new tree.common.Node(3);
 
-        root.left.left = new Node(4);
-        root.left.right = new Node(5);
-        root.left.right.left = new Node(9);
-        root.left.right.right = new Node(10);
+        root.left.left = new tree.common.Node(4);
+        root.left.right = new tree.common.Node(5);
+        root.left.right.left = new tree.common.Node(9);
+        root.left.right.right = new tree.common.Node(10);
 
-        root.right.left = new Node(6);
-        root.right.right = new Node(8);
-        root.right.right.right = new Node(11);
+        root.right.left = new tree.common.Node(6);
+        root.right.right = new tree.common.Node(8);
+        root.right.right.right = new tree.common.Node(11);
 
         printNodes(root.left);
 

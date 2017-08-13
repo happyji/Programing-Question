@@ -1,4 +1,4 @@
-package Code;
+package tree;
 
 /*
        Tree operation :
@@ -13,23 +13,12 @@ package Code;
 
 import java.util.Stack;
 
-class Node{
-    int data;
-    Node left;
-    Node right;
-
-    Node(int data){
-        this.data = data;
-        this.left = null;
-        this.right = null;
-    }
-}
 
 
-public class Solution {
+public class DepthFirstSearchTreeTraversal {
 
 
-    public static void preOrder(Node p){
+    public static void preOrder(tree.common.Node p){
         if(p== null) return;
         System.out.print(p.data + " ");
         preOrder(p.left);
@@ -37,8 +26,8 @@ public class Solution {
     }
 
     public static void nonRecursivePrePreorder(){
-        Stack<Node> stack = new Stack();
-        Node p = root;
+        Stack<tree.common.Node> stack = new Stack();
+        tree.common.Node p = root;
         System.out.println();
 
         while (p!=null){
@@ -61,7 +50,7 @@ public class Solution {
         }
     }
 
-    public static void inOrder(Node p){
+    public static void inOrder(tree.common.Node p){
         if(p== null) return;
         inOrder(p.left);
         System.out.print(p.data + " ");
@@ -70,8 +59,8 @@ public class Solution {
 
 
     public static void nonRecursiveInOrder(){
-        Stack<Node> stack = new Stack<>();
-        Node p= root;
+        Stack<tree.common.Node> stack = new Stack<>();
+        tree.common.Node p= root;
         System.out.println();
 
         while (p!= null){
@@ -94,7 +83,7 @@ public class Solution {
     }
 
 
-    public static void postOrder(Node p){
+    public static void postOrder(tree.common.Node p){
         if(p== null) return;
         postOrder(p.left);
         postOrder(p.right);
@@ -102,9 +91,9 @@ public class Solution {
     }
 
     public static void nonRecursivePostOrder(){
-        Stack<Node> stack = new Stack<>();
+        Stack<tree.common.Node> stack = new Stack<>();
         Stack<Boolean> visited = new Stack<>();
-        Node p = root;
+        tree.common.Node p = root;
         Boolean isVisited;
 
         System.out.println();
@@ -143,7 +132,7 @@ public class Solution {
 
 
 
-    public static int count(Node p){
+    public static int count(tree.common.Node p){
         if(p== null) return 0;
         int lcount =count(p.left);
         int rcount = count(p.right);
@@ -151,7 +140,7 @@ public class Solution {
     }
 
 
-    public static int height(Node p){
+    public static int height(tree.common.Node p){
         if(p== null) return -1;
         int lhgt =height(p.left);
         int rhgt = height(p.right);
@@ -159,9 +148,9 @@ public class Solution {
     }
 
      public static int getHeight(){
-        Stack<Node> stack = new Stack<>();
+        Stack<tree.common.Node> stack = new Stack<>();
         stack.push(root);
-        Node p = root;
+        tree.common.Node p = root;
         int index =0;
         int height = 0;
 
@@ -198,22 +187,22 @@ public class Solution {
 
 
 
-    public static Node root;
+    public static tree.common.Node root;
 
     public static void main(String args[]){
-        root = new Node(50);
+        root = new tree.common.Node(50);
 
-        root.left = new Node(25);
-        root.left.left = new Node(12);
-        root.left.right = new Node(30);
-        root.left.left.left = new Node(7);
-        root.left.left.right = new Node(20);
+        root.left = new tree.common.Node(25);
+        root.left.left = new tree.common.Node(12);
+        root.left.right = new tree.common.Node(30);
+        root.left.left.left = new tree.common.Node(7);
+        root.left.left.right = new tree.common.Node(20);
 
-        root.right = new Node(70);
-        root.right.left = new Node(60);
-        root.right.right = new Node(80);
-        root.right.left.left = new Node(55);
-        root.right.left.right = new Node(65);
+        root.right = new tree.common.Node(70);
+        root.right.left = new tree.common.Node(60);
+        root.right.right = new tree.common.Node(80);
+        root.right.left.left = new tree.common.Node(55);
+        root.right.left.right = new tree.common.Node(65);
 
         /*System.out.println("Count :"+count(root));
         inOrder(root);
