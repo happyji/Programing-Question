@@ -1,27 +1,38 @@
-package Code;
+package dynamicprogramming;
 
+
+
+/*
+        knapsack(item,wt)  =
+
+        wt ==0   :  0
+        item
+
+        max(knapsack(item-1,wt), value[item] + knapsack(item-1,wt-weight[item]))
+
+
+
+ */
 
 
 public class Knapsack01 {
 
+    public static int getKnapSack(int weight[],int value[],int item,int wt){
 
-    /*
+        if(wt == 0 || item < 0)
+            return 0;
 
-            0   1   2   3   4   5   6   7
-        
-        0   0   0   0   0   0   0   0   0
-
-        1   0
-        
-        4   0
-
-        5   0
-
-        7   0
+        if(weight[item] >wt)
+            return getKnapSack(weight,value,item-1,wt);
 
 
+        int dntPick = getKnapSack(weight,value,item-1,wt);
 
-    */
+        int pick=  (value[item])  + getKnapSack(weight,value,item-1,wt-weight[item]);
+
+        return Math.max(dntPick,pick);
+    }
+
 
     
     public static int get01KnapSack(int[] weight,int[] value,int total){
@@ -47,11 +58,14 @@ public class Knapsack01 {
         return DP[weight.length][total];
     }
 
+
+
+
     public static void main(String args[]){
-         int [] weight = {1,3,4,5};
-         int [] value = {1,4,5,7};
+         int [] weight = {1,3,4,5,8};
+         int [] value = {1,4,5,7,15};
 
-        System.out.println(get01KnapSack(weight,value,7));
-
+        System.out.println(get01KnapSack(weight,value,20));
+        System.out.println(getKnapSack(weight,value,weight.length-1,20));
     }
 }

@@ -1,4 +1,4 @@
-package Code;
+package dynamicprogramming;
 import java.util.*;
 
 
