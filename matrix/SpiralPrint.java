@@ -1,17 +1,6 @@
 package matrix;
 
-
-
-
-
 public class SpiralPrint {
-
-
-
-
-
-
-
 
     public static void spiralMatrix(int mat[][], int m, int n)
     {

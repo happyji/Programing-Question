@@ -7,14 +7,14 @@ public class AlterListFirstLast {
 
 
 
-    public static Node getAlterList(Node root)
+    public static ListNode getAlterList(ListNode root)
     {
         if(root == null) return null;
 
-        Node last= null;
-        Stack<Node> stack = new Stack<>();
-        Node p = root;
-        Node q = root;
+        ListNode last= null;
+        Stack<ListNode> stack = new Stack<>();
+        ListNode p = root;
+        ListNode q = root;
 
         while (true)
         {
@@ -38,8 +38,8 @@ public class AlterListFirstLast {
 
         while (!stack.isEmpty())
         {
-            Node a = stack.pop();
-            Node b = p;
+            ListNode a = stack.pop();
+            ListNode b = p;
             a.next = b;
 
             p = p.next;
@@ -52,9 +52,9 @@ public class AlterListFirstLast {
 
     }
 
-    public static void printList(Node root)
+    public static void printList(ListNode root)
     {
-        Node p = root;
+        ListNode p = root;
         System.out.println();
         while (p!= null)
         {
@@ -67,13 +67,13 @@ public class AlterListFirstLast {
 
     public static void main(String args[])
     {
-        Node root = new Node(1);
-        root.next = new Node(2);
-        root.next.next = new Node(3);
-        root.next.next.next = new Node(4);
-        root.next.next.next.next = new Node(5);
-        root.next.next.next.next.next = new Node(6);
-        root.next.next.next.next.next.next = new Node(7);
+        ListNode root = new ListNode(1);
+        root.next = new ListNode(2);
+        root.next.next = new ListNode(3);
+        root.next.next.next = new ListNode(4);
+        root.next.next.next.next = new ListNode(5);
+        root.next.next.next.next.next = new ListNode(6);
+        root.next.next.next.next.next.next = new ListNode(7);
 
         printList(root);
         root = getAlterList(root);

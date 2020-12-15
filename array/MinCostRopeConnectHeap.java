@@ -22,12 +22,8 @@ public class MinCostRopeConnectHeap {
        return cost;
    }
 
-
-
-
-
     public static void main(String args[]){
-        List<Integer> list = Arrays.asList(4,3,2,6);
+        List<Integer> list = Arrays.asList(4,3,2,6,7);
         System.out.println(getMinCostRopeConnect(list));
 
     }

@@ -5,53 +5,54 @@ package list;
 
 public class KReverse {
 
-    public static Node head;
+    public static ListNode head;
 
     // 1->2->3->4->5->6->7->8->9->10->11->12->13->14->15
     // 1
     // 1->2
     //1-> 2->3-> 4
 
-    public static Node kReverse(Node h,int k)
+    public static ListNode kReverse(ListNode h, int k)
     {
-        Node current = h;
-        Node prev = null;
-        Node next = null;
+        ListNode p = h;
+        ListNode q = null;
+        ListNode r = null;
 
         int count = 0;
-        while (current!= null && count < k)
+        while (p!= null && count < k)
         {
-            next = current.next;
-            current.next = prev;
-            prev = current;
-            current = next;
+            r = p.next;
+            p.next = q;
+            q = p;
+            p = r;
             count++;
         }
 
-        if(next!= null)
-            h.next = kReverse(next,k);
+        // r which is the next node exist then repeat // Note :  h is incoming will catch upcoming reversed node
+        if(r!= null)
+            h.next = kReverse(r,k);
 
-        return prev;
+        return q;
     }
 
     public static void buildList(int len)
     {
-        Node preNode = null;
+        ListNode preListNode = null;
         for(int i=1; i<= len ; i++)
         {
-            Node n = new Node(i);
+            ListNode n = new ListNode(i);
             if(head == null)
                 head = n;
             else
-                preNode.next = n;
+                preListNode.next = n;
 
 
-            preNode = n;
+            preListNode = n;
         }
     }
 
     public static void printList(){
-        Node p = head;
+        ListNode p = head;
 
         while (p!= null)   {
             System.out.print(p.data+" ");
@@ -61,43 +62,12 @@ public class KReverse {
     }
 
     public static void main(String args[]){
-      /*  buildList(14);
+        System.out.println();
+        buildList(11);
         printList();
         System.out.println();
         head = kReverse(head,3);
-        printList();*/
-
-        /*System.out.println();
-        buildList(1);
         printList();
-        System.out.println();
-        head = kReverse(head,3);
-        printList();*/
-
-        /*System.out.println();
-        buildList(2);
-        printList();
-        System.out.println();
-        head = kReverse(head,3);
-        printList();*/
-
-        /*System.out.println();
-        buildList(12);
-        printList();
-        System.out.println();
-        head = kReverse(head,2);
-        printList();*/
-
-        System.out.println();
-        buildList(12);
-        printList();
-        System.out.println();
-        head = kReverse(head,12);
-        printList();
-
-
-
-
     }
 
 

@@ -1,10 +1,10 @@
 package list;
 
-public class Node{
+public class ListNode {
     int data;
-    Node next;
+    ListNode next;
 
-    Node(int d){
+    ListNode(int d){
         this.data = d;
         next = null;
     }

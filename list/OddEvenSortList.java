@@ -7,11 +7,9 @@ package list;
  */
 
 
-import list.Node;
-
 public class OddEvenSortList {
 
-    public static Node head;
+    public static ListNode head;
 
     public static boolean isODD(int data)
     {
@@ -20,13 +18,13 @@ public class OddEvenSortList {
 
     public static void oddEvenSortList()
     {
-        Node p = head;
+        ListNode p = head;
         head = null;
         // 1->2->3->4->5
-        Node oddStart = null;
-        Node oddEnd = null;
+        ListNode oddStart = null;
+        ListNode oddEnd = null;
 
-        Node evenEnd = null;
+        ListNode evenEnd = null;
 
         while (p!=null)
         {
@@ -57,7 +55,7 @@ public class OddEvenSortList {
 
     public static void printList()
     {
-        Node p = head;
+        ListNode p = head;
         while (p!=null){
             System.out.print(p.data+" ");
             p=p.next;
@@ -68,11 +66,11 @@ public class OddEvenSortList {
 
 
     public static void main(String args[]){
-        head = new Node(1);
-        head.next = new Node(2);
-        head.next.next = new Node(3);
-        head.next.next.next = new Node(4);
-        head.next.next.next.next = new Node(5);
+        head = new ListNode(1);
+        head.next = new ListNode(2);
+        head.next.next = new ListNode(3);
+        head.next.next.next = new ListNode(4);
+        head.next.next.next.next = new ListNode(5);
 
         oddEvenSortList();
         printList();

@@ -4,10 +4,6 @@ package array;
 
 public class KMPAlgorithm {
 
-
-
-
-
     public static void computeLPS(String str,int [] lps){
         int i=1;
         int j=0;
