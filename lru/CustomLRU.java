@@ -1,9 +1,17 @@
-package Code;
+package lru;
 
-import javax.xml.soap.Node;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
+
+
+/*
+      pre <- key/value -> next
+
+      Maintain a map and a doublely linked List
+
+ */
+
 
 class LRUNode
 {
@@ -39,11 +47,11 @@ class LRUCache {
     {
         if(node.pre != null)
         {
-           node.pre.next = node.next;
+            node.pre.next = node.next;
         }
         else
         {
-           head = node.next;
+            head = node.next;
         }
 
         if(node.next!= null)
@@ -62,7 +70,7 @@ class LRUCache {
         node.pre = null;
 
         if(head !=null)
-        head.pre = node;
+            head.pre = node;
 
         head = node;
 
@@ -114,7 +122,7 @@ class LRUCache {
 
 class LRULinkedHashMap  extends LinkedHashMap
 {
-  int capacity =5;
+    int capacity =5;
 
     LRULinkedHashMap(int capacity)
     {
@@ -151,6 +159,6 @@ class LRUCustomLRU
         lruLinkedHashMap.put(5,50);
         lruLinkedHashMap.put(6,60);
 
-        System.out.println(lruLinkedHashMap.get(1));
+        System.out.println(lruLinkedHashMap.get(3));
     }
 }

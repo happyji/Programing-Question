@@ -71,9 +71,24 @@ public class MinCoinProblem {
         }
     }
 
+
+
+
+    public static int coinChange(int[] coins, int amount) {
+        return coinChange(coins,amount,coins.length-1);
+    }
+
+    public static int coinChange(int[] coins, int amount,int index) {
+
+
+        return 0;
+    }
+
+
     public static void main(String args[]){
-        int coin[]={7,2,3,6};
-        getMinNoOfCoin(coin, 13);
+        int coin[]={1,2,5};
+        int i = coinChange(coin, 11);
+        System.out.println(i);
     }
 
 }

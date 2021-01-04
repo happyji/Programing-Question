@@ -17,6 +17,7 @@ public class Rotate {
             for (int k=0;k< last;k++)
             {
                 int diff = k-first;
+
                 int temp = mat[first][k];
                 mat[first][k] = mat[last-diff][first];
                 mat[last-diff][first] = mat[last][last-diff];
@@ -32,6 +33,7 @@ public class Rotate {
 
     public static void rotate(int mat[][]){
 
+        // tranverse of the matrix
         for(int i=0 ;i< mat.length;i++)
         {
             for(int j=0; j< i; j++){
@@ -43,6 +45,7 @@ public class Rotate {
             }
         }
 
+        //horizonal swap
         for(int i=0 ;i< mat.length;i++)
         {
             int n = mat.length;

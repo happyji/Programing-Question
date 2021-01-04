@@ -19,6 +19,7 @@ public class KReverse {
         ListNode r = null;
 
         int count = 0;
+        // Try reversing the list , just keep count of reverse node
         while (p!= null && count < k)
         {
             r = p.next;
@@ -28,7 +29,8 @@ public class KReverse {
             count++;
         }
 
-        // r which is the next node exist then repeat // Note :  h is incoming will catch upcoming reversed node
+        // r which is the next node exist then repeat
+        // Note :  h (which is incoming) will catch upcoming reversed node
         if(r!= null)
             h.next = kReverse(r,k);
 

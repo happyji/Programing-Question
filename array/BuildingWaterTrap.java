@@ -1,4 +1,4 @@
-package Code;
+package array;
 
 /*
     min(lmax[i],rmax[i])- arr[i]
@@ -9,34 +9,39 @@ package Code;
 
 public class BuildingWaterTrap {
 
+    public static int trap(int[] height) {
+        int n = height.length;
 
-    public static void buildingWaterTrap(int arr[])
-    {
-        int lmax[] = new int[arr.length];
-        int rmax[] = new int[arr.length];
-
-        int max=-1;
-        for(int i=0;i<arr.length;i++)
-        {
-            lmax[i] = max;
-            if(arr[i]>max) max= arr[i];
+        int max = Integer.MIN_VALUE;
+        int[] leftmax = new int[n];
+        for(int i=0;i< n;i++){
+            max = Math.max(height[i],max);
+            leftmax[i] = max;
         }
 
-        max=-1;
-        for(int i=arr.length-1;i>=0;i--)
-        {
-            rmax[i] = max;
-            if(arr[i]>max) max= arr[i];
+
+        max = Integer.MIN_VALUE;
+        int[] rightmax = new int[n];
+        for(int i=n-1;i>=0;i--){
+            max = Math.max(height[i],max);
+            rightmax[i] = max;
         }
 
-        int totalTrap=0;
-        for(int i=1;i< arr.length;i++)
-        {
-            int trap = Math.min(lmax[i],rmax[i])-arr[i];
-            if(trap>0)  totalTrap+= trap;
+        int sum = 0;
+        int result = 0;
+        for (int i=1;i< height.length;i++){
+            int x = Math.min(leftmax[i],rightmax[i]) - height[i];
+            if(x>0){
+                sum += x;
+            }
+            if(sum> result){
+                result = sum;
+            }
         }
 
-        System.out.println(totalTrap);
+        System.out.println(result);
+        return result;
+
     }
 
 
@@ -44,7 +49,7 @@ public class BuildingWaterTrap {
     public static void main(String args[]){
         //int arr[]={1,4,3,2,3};
         int arr[] = {0,1,0,2,1,0,1,3,2,1,2,1};
-        buildingWaterTrap(arr);
+        trap(arr);
     }
 
 

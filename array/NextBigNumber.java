@@ -48,13 +48,13 @@ public class NextBigNumber {
     public static void main(String args[]){
 
         //test  case
-        //int arr[] = {10,9,8,10,11};
+        int arr[] = {10,9,8,10,11};
         //int arr[] = {10,9,8,7,6,5};
         //int arr[] = {1 ,2 ,3 ,4 ,5 ,6 ,7};
         //int arr[] = {10 ,10 ,10 ,10 ,10};
         //int arr[] = {10};
         //int arr[] = {10,12};
-        int arr[] = {12,10};
+        //int arr[] = {12,10};
         nextBigNumber(arr);
 
 

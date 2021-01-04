@@ -45,6 +45,7 @@ class CustomBlockingQueue {
                 wait();
             }
 
+            System.out.println(Thread.currentThread().getName() + "Produced  : "+ input);
             queue.add(input);
 
             notify();
@@ -59,6 +60,7 @@ class CustomBlockingQueue {
             }
 
             Integer poll = (Integer) queue.poll();
+            System.out.println(Thread.currentThread().getName() + "Consumed : "+ poll);
 
             notify();
             return poll;
@@ -74,7 +76,7 @@ public class ProducerConsumer {
 
         CustomBlockingQueue blockingQueue = new CustomBlockingQueue(2);
 
-        Thread producer = new Thread(new Runnable() {
+        Runnable producerRunnable = new Runnable() {
             @Override
             public void run() {
                 int counter = 0;
@@ -82,7 +84,7 @@ public class ProducerConsumer {
                     while (true) {
                         counter++;
                         blockingQueue.put(counter);
-                        System.out.println("Produced : " + counter);
+                       // System.out.println("Produced : " + counter);
 
                         Thread.sleep(2000);
 
@@ -92,34 +94,40 @@ public class ProducerConsumer {
                 }
 
             }
-        });
+        };
 
+        Thread producer1 = new Thread(producerRunnable,"producer1");
+        Thread producer2 = new Thread(producerRunnable,"producer2");
 
-        Thread consumer = new Thread(() -> {
+        Runnable consumerRunnable = new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    while (true) {
 
-            try {
-                while (true) {
+                        Integer take = (Integer) blockingQueue.take();
+                       // System.out.println("Consumed : " + take);
 
-                    Integer take = (Integer) blockingQueue.take();
-                    System.out.println("Consumed : " + take);
+                        Thread.sleep(2000);
 
-                    Thread.sleep(2000);
+                    }
 
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
                 }
-
-            } catch (InterruptedException e) {
-                e.printStackTrace();
             }
 
-        });
+        };
+
+            Thread consumer1 = new Thread(consumerRunnable,"consumer1");
+            Thread consumer2 = new Thread(consumerRunnable,"consumer2");
+
+        producer1.start();
+        producer2.start();
 
 
-        producer.start();
-        consumer.start();
-
-
-        producer.join();
-        consumer.join();
+        consumer1.start();
+        consumer2.start();
 
     }
 

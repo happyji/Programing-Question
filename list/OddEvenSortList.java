@@ -2,7 +2,8 @@ package list;
 
 /*
    Given a singly linked list,
-   write a function to put all the even numbers at the front and odd numbers at the end of ll while maintaining the order of numbers.
+   write a function to put all the even numbers at the front and
+   odd numbers at the end of ll while maintaining the order of numbers.
    In place solution was expected.
  */
 
